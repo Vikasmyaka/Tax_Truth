@@ -1,0 +1,227 @@
+.wizardContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface-1);
+}
+
+.wizardHeader {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-surface-3);
+  padding: var(--space-4) 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.headerContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.headerTopRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.backBtn {
+  color: var(--color-text-secondary);
+  font-weight: var(--font-medium);
+}
+
+.backBtn:hover {
+  color: var(--color-navy-900);
+}
+
+.stepIndicator {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-weight: var(--font-semibold);
+}
+
+.continueBtn {
+  background-color: var(--color-navy-900);
+  color: var(--color-white);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-semibold);
+}
+
+.continueBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.continueBtn:not(:disabled):hover {
+  background-color: var(--color-navy-800);
+}
+
+.wizardBody {
+  display: flex;
+  flex: 1;
+}
+
+.questionArea {
+  flex: 1;
+  padding: var(--space-10) 0 var(--space-20);
+}
+
+.questionAreaInner {
+  max-width: 600px;
+}
+
+.stepTitle {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-2);
+}
+
+.stepSubLabel {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-8);
+}
+
+.livePreviewPanel {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .livePreviewPanel {
+    display: block;
+    width: 380px;
+    background-color: var(--color-white);
+    border-left: 1px solid var(--color-surface-3);
+    padding: var(--space-6);
+  }
+}
+
+/* Step 1 specifics */
+.radioGroup {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.radioOption {
+  flex: 1;
+  border: 1px solid var(--color-surface-3);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  cursor: pointer;
+  background-color: var(--color-white);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.radioOption:hover {
+  border-color: var(--color-teal-500);
+}
+
+.radioOption.selected {
+  border-color: var(--color-teal-500);
+  background-color: var(--color-teal-100);
+}
+
+.validationBox {
+  margin-top: var(--space-6);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.validationBox.success {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--color-success);
+  border: 1px solid var(--color-success);
+}
+
+.validationBox.warning {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--color-warning);
+  border: 1px solid var(--color-warning);
+}
+
+/* Mobile Live Preview Drawer */
+.mobilePreviewOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.mobilePreviewDrawer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-white);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateY(calc(100% - 46px));
+}
+
+.mobilePreviewDrawer.expanded {
+  transform: translateY(0);
+}
+
+.drawerHandle {
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid var(--color-surface-2);
+}
+
+.handleBar {
+  width: 40px;
+  height: 5px;
+  background: var(--color-surface-3);
+  border-radius: 3px;
+}
+
+.drawerContent {
+  padding: 20px;
+}
+
+@media (min-width: 1024px) {
+  .mobilePreviewDrawer,
+  .mobilePreviewOverlay {
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.stepContainer {
+  animation: fadeSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,325 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-4);
+}
+
+.navbar {
+  border-bottom: 1px solid var(--color-surface-3);
+  background-color: rgba(11, 13, 17, 0.8);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--space-4);
+}
+
+.logo {
+  font-weight: var(--font-bold);
+  font-size: var(--text-lg);
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+}
+
+.navBtn {
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  color: var(--color-teal-400);
+  background-color: rgba(0, 229, 197, 0.1);
+  border: 1px solid rgba(0, 229, 197, 0.2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.navBtn:hover {
+  background-color: rgba(0, 229, 197, 0.2);
+  transform: translateY(-1px);
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-surface-3);
+}
+
+.welcomeTitle {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--color-navy-900);
+  margin-bottom: var(--space-2);
+}
+
+.welcomeSubtitle {
+  color: var(--color-text-secondary);
+}
+
+.topStatsGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-10);
+}
+
+@media (max-width: 768px) {
+  .topStatsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.healthCard {
+  background: linear-gradient(135deg, var(--color-surface-2), var(--color-surface-1));
+  border: 1px solid var(--color-teal-500);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.healthCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-teal-300), var(--color-teal-500));
+}
+
+.healthScore {
+  font-size: var(--text-5xl);
+  font-weight: var(--font-bold);
+  color: var(--color-teal-400);
+  margin: var(--space-2) 0;
+  line-height: 1;
+}
+
+.healthLabel {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: var(--font-bold);
+}
+
+.actionCard {
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-surface-3);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-6);
+}
+
+/* ITR Filing Banner */
+.itrBanner {
+  background: linear-gradient(135deg, rgba(0, 229, 197, 0.15) 0%, rgba(10, 15, 30, 0.9) 100%);
+  border: 1px solid rgba(0, 229, 197, 0.3);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  margin-bottom: var(--space-8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-6);
+  box-shadow: 0 8px 32px rgba(0, 229, 197, 0.05);
+}
+
+.itrBannerContent {
+  flex: 1;
+}
+
+.itrBadge {
+  display: inline-block;
+  background-color: var(--color-teal-500);
+  color: var(--color-surface-1);
+  font-size: var(--text-xs);
+  font-weight: var(--font-bold);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.itrBannerTitle {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.itrBannerDesc {
+  color: var(--color-text-secondary);
+  font-size: var(--text-base);
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.itrBannerBtn {
+  background-color: var(--color-teal-500);
+  color: var(--color-surface-1);
+  font-weight: var(--font-bold);
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-xl);
+  text-decoration: none;
+  font-size: var(--text-base);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0, 229, 197, 0.3);
+}
+
+.itrBannerBtn:hover {
+  background-color: var(--color-teal-400);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 229, 197, 0.4);
+}
+
+@media (max-width: 768px) {
+  .itrBanner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-6);
+  }
+  .itrBannerBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+.actionTitle {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-navy-900);
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.actionList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.actionItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background-color: var(--color-surface-1);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-3);
+  border: 1px solid var(--color-surface-3);
+}
+
+.actionIcon {
+  font-size: 20px;
+}
+
+.actionText {
+  flex: 1;
+}
+
+.actionText strong {
+  display: block;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.actionText span {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.toolsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+  .toolsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .toolsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.toolCard {
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-surface-3);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.toolCard:hover {
+  border-color: var(--color-teal-500);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 229, 197, 0.1);
+}
+
+.toolIcon {
+  font-size: 32px;
+  margin-bottom: var(--space-4);
+  background-color: var(--color-surface-1);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+}
+
+.toolTitle {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.toolDesc {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  flex: 1;
+}
+
+.toolArrow {
+  margin-top: var(--space-4);
+  color: var(--color-teal-500);
+  font-weight: var(--font-bold);
+  font-size: var(--text-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}

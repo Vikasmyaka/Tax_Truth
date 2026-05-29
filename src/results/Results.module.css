@@ -1,0 +1,325 @@
+.verdictContainer {
+  background-color: var(--color-navy-900);
+  color: var(--color-white);
+  padding: var(--space-8);
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+.verdictTitle {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-2);
+  line-height: 1.2;
+}
+
+.verdictSub {
+  font-size: var(--text-lg);
+  color: var(--color-teal-300);
+  margin-bottom: var(--space-8);
+  font-weight: var(--font-medium);
+}
+
+.verdictCards {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.regimeCard {
+  background-color: var(--color-navy-800);
+  border: 2px solid var(--color-navy-700);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  flex: 1;
+  max-width: 300px;
+  text-align: left;
+}
+
+.winnerCard {
+  border-color: var(--color-teal-500);
+  background-color: rgba(0, 191, 165, 0.1);
+  position: relative;
+}
+
+.winnerCard::after {
+  content: "🏆 WINNER";
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background-color: var(--color-teal-500);
+  color: var(--color-navy-900);
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.regimeHeader {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-2);
+}
+
+.regimeTaxAmount {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  color: var(--color-white);
+  margin-bottom: var(--space-2);
+}
+
+.regimeEffective {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.tdsAdvice {
+  background-color: rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-6);
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.btnPrimary {
+  background-color: var(--color-teal-500);
+  color: var(--color-navy-900);
+  border: none;
+  padding: 0 var(--space-6);
+  height: var(--button-height);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-base);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnPrimary:hover {
+  background-color: var(--color-teal-400);
+}
+
+.btnSecondary {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1px solid var(--color-navy-700);
+  padding: 0 var(--space-6);
+  height: var(--button-height);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-medium);
+  font-size: var(--text-base);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnSecondary:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Comparison Table */
+.tableContainer {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-surface-3);
+  overflow: hidden;
+  margin-bottom: var(--space-12);
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  background-color: var(--color-surface-2);
+  padding: var(--space-4) var(--space-6);
+  font-weight: var(--font-bold);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-surface-3);
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding: var(--space-3) var(--space-6);
+  border-bottom: 1px solid var(--color-surface-2);
+  font-size: var(--text-sm);
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.tableSectionHeader {
+  background-color: var(--color-surface-1);
+  padding: var(--space-2) var(--space-6);
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-surface-2);
+}
+
+.amountCol {
+  font-family: var(--font-family-mono);
+  text-align: right;
+}
+
+.rowLabel {
+  color: var(--color-text-primary);
+}
+
+.deductionRow .amountCol {
+  color: var(--color-success);
+}
+
+.totalRow {
+  font-weight: var(--font-bold);
+  background-color: var(--color-surface-1);
+  border-top: 2px solid var(--color-surface-3);
+  border-bottom: 2px solid var(--color-surface-3);
+}
+
+.finalTaxRow {
+  font-weight: var(--font-bold);
+  font-size: var(--text-lg);
+  background-color: var(--color-navy-900);
+  color: var(--color-white);
+}
+
+.finalTaxRow .amountCol,
+.finalTaxRow .rowLabel {
+  color: var(--color-white);
+}
+
+/* Secrets Section */
+.infoIcon {
+  color: var(--color-teal-500);
+  font-size: 11px;
+  margin-left: 4px;
+  cursor: help;
+  vertical-align: middle;
+}
+
+.secretsSection {
+  margin-bottom: var(--space-12);
+}
+
+.sectionTitle {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-6);
+}
+
+.secretCard {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-warning);
+  border-left: 4px solid var(--color-warning);
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
+  box-shadow: var(--shadow-sm);
+}
+
+.secretHigh {
+  border-color: var(--color-error);
+}
+
+.secretMedium {
+  border-color: var(--color-warning);
+}
+
+.secretTitle {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.secretBody {
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  font-size: var(--text-sm);
+}
+
+/* Next Actions */
+.actionList {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.actionCard {
+  background-color: var(--color-surface-1);
+  border: 1px solid var(--color-surface-3);
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  display: flex;
+  gap: var(--space-4);
+}
+
+.actionIcon {
+  font-size: var(--text-2xl);
+}
+
+.actionTitle {
+  font-weight: var(--font-bold);
+  margin-bottom: 4px;
+}
+
+.actionBody {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+.actionDeadline {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--color-error);
+}
+
+/* Disclaimer */
+.disclaimer {
+  margin-top: var(--space-16);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-surface-3);
+  font-size: 12px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  .noPrint {
+    display: none !important;
+  }
+  .verdictContainer {
+    background-color: transparent !important;
+    color: black !important;
+    border: 2px solid black;
+  }
+  .regimeCard {
+    background-color: transparent !important;
+    border: 1px solid black !important;
+    color: black !important;
+  }
+  * {
+    box-shadow: none !important;
+  }
+}
