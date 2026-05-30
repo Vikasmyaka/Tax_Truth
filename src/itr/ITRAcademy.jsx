@@ -284,7 +284,7 @@ export default function ITRAcademy() {
     <div className={styles.libraryContainer}>
       {/* Sidebar Navigation */}
       <aside className={styles.sidebar}>
-        <Link to="/" className={styles.sidebarTitle}>← TaxTruth India</Link>
+        <Link to="/" className={styles.sidebarTitle}>← Tax Buddy</Link>
         
         <div className={styles.navSection}>
           <div className={styles.navHeading}>1. Form Selection</div>

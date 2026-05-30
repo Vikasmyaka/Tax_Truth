@@ -89,10 +89,10 @@ export function DisclaimerFooter() {
           ⚠️ Legal Disclaimer & terms of use
         </div>
         <p className={styles.disclaimerText}>
-          TaxTruth India is an independent tax planning simulator for educational and estimation purposes only. We do not guarantee 100% mathematical or legal accuracy of calculations or pre-fills. This tool does not constitute professional tax, legal, or financial advice.
+          Tax Buddy is an independent tax planning simulator for educational and estimation purposes only. We do not guarantee 100% mathematical or legal accuracy of calculations or pre-fills. This tool does not constitute professional tax, legal, or financial advice.
         </p>
         <p className={styles.disclaimerText}>
-          <strong>User Responsibility & Liability:</strong> You are solely responsible for verifying all figures against official documents (such as Form 16, AIS, and Form 26AS) before filing. TaxTruth India, its developers, and its owners shall not be held liable for any tax, interest, penal fees, or legal disputes resulting from the use of, or reliance upon, the data and guidelines provided on this website.
+          <strong>User Responsibility & Liability:</strong> You are solely responsible for verifying all figures against official documents (such as Form 16, AIS, and Form 26AS) before filing. Tax Buddy, its developers, and its owners shall not be held liable for any tax, interest, penal fees, or legal disputes resulting from the use of, or reliance upon, the data and guidelines provided on this website.
         </p>
       </div>
     </footer>

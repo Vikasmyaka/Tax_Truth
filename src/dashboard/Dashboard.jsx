@@ -8,7 +8,7 @@ export default function Dashboard() {
       {/* Navbar */}
       <nav className={styles.navbar}>
         <div className={styles.navContainer}>
-          <div className={styles.logo}>TaxTruth India</div>
+          <div className={styles.logo}>Tax Buddy</div>
         </div>
       </nav>
 
