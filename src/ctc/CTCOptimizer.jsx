@@ -992,7 +992,10 @@ Thank you,
             </div>
 
             <div className={styles.emailSection}>
-              <h2 className={styles.cardTitle}>📧 Send this to HR right now</h2>
+              <h2 className={styles.cardTitle}>Send this to HR</h2>
+              <p className={styles.subtitle} style={{ textAlign: 'left', margin: '0 0 1rem 0' }}>
+                Copy and paste this exact template. You don't need a promotion to get a hike. You just need to restructure.
+              </p>
               <div className={styles.emailBox}>
                 <button className={styles.copyBtn} onClick={copyEmail}>
                   {copied ? '✓ COPIED!' : 'COPY TEMPLATE'}
