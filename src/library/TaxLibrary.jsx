@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './TaxLibrary.module.css';
 
+import { Logo } from '../components';
+
 export default function TaxLibrary() {
   const [activeSection, setActiveSection] = useState('basics-fy-ay');
 
@@ -77,7 +79,12 @@ export default function TaxLibrary() {
     <div className={styles.libraryContainer}>
       {/* Sidebar Navigation */}
       <aside className={styles.sidebar}>
-        <Link to="/" className={styles.sidebarTitle}>← Tax Buddy</Link>
+        <div style={{ marginBottom: 'var(--space-8)', display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
+          <Link to="/" style={{ color: 'var(--color-text-secondary)', textDecoration: 'none', fontSize: 'var(--text-sm)', display: 'flex', alignItems: 'center', gap: '4px', fontWeight: 'bold' }}>
+            ← Dashboard
+          </Link>
+          <Logo />
+        </div>
         
         <div className={styles.navSection}>
           <div className={styles.navHeading}>1. The Basics</div>

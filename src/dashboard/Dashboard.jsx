@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './Dashboard.module.css';
-import { DisclaimerFooter } from '../components';
+import { DisclaimerFooter, Logo } from '../components';
 
 export default function Dashboard() {
   return (
@@ -8,7 +8,7 @@ export default function Dashboard() {
       {/* Navbar */}
       <nav className={styles.navbar}>
         <div className={styles.navContainer}>
-          <div className={styles.logo}>Tax Buddy</div>
+          <Logo />
         </div>
       </nav>
 

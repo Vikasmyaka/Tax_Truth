@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Components.module.css';
 
 export { default as NumberTicker } from './NumberTicker';
@@ -96,5 +97,39 @@ export function DisclaimerFooter() {
         </p>
       </div>
     </footer>
+  );
+}
+
+export function Logo({ className, to = '/' }) {
+  const content = (
+    <>
+      <svg className={styles.logoIcon} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#logo-grad)" />
+        <circle cx="8.5" cy="10.5" r="1.5" fill="#0B0D11" />
+        <circle cx="15.5" cy="10.5" r="1.5" fill="#0B0D11" />
+        <path d="M7.5 15C8.5 16.5 10 17.5 12 17.5C14 17.5 15.5 16.5 16.5 15" stroke="#0B0D11" strokeWidth="2" strokeLinecap="round" />
+        <defs>
+          <linearGradient id="logo-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#00e5c5" />
+            <stop offset="1" stopColor="#00b4d8" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <span>Tax Buddy</span>
+    </>
+  );
+
+  if (to) {
+    return (
+      <Link to={to} className={`${styles.logoWrapper} ${className || ''}`}>
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <div className={`${styles.logoWrapper} ${className || ''}`}>
+      {content}
+    </div>
   );
 }

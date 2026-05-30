@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useURLState } from '../hooks/useURLState';
 import { calculateTax } from '../engine/taxCalculator';
-import { DisclaimerFooter } from '../components';
+import { DisclaimerFooter, Logo } from '../components';
 import styles from './ITRAcademy.module.css';
 
 const defaultInputs = {
@@ -284,7 +284,12 @@ export default function ITRAcademy() {
     <div className={styles.libraryContainer}>
       {/* Sidebar Navigation */}
       <aside className={styles.sidebar}>
-        <Link to="/" className={styles.sidebarTitle}>← Tax Buddy</Link>
+        <div style={{ marginBottom: 'var(--space-8)', display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
+          <Link to="/" style={{ color: 'var(--color-text-secondary)', textDecoration: 'none', fontSize: 'var(--text-sm)', display: 'flex', alignItems: 'center', gap: '4px', fontWeight: 'bold' }}>
+            ← Dashboard
+          </Link>
+          <Logo />
+        </div>
         
         <div className={styles.navSection}>
           <div className={styles.navHeading}>1. Form Selection</div>
