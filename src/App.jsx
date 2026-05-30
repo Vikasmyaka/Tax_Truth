@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import WizardController from './wizard/WizardController';
 import ResultPage from './results/ResultPage';
 import TaxLibrary from './library/TaxLibrary';
@@ -12,16 +13,19 @@ import './styles/global.css';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Dashboard />} />
-      <Route path="/calculate" element={<WizardController />} />
-      <Route path="/results" element={<ResultPage />} />
-      <Route path="/library" element={<TaxLibrary />} />
-      <Route path="/upload" element={<Form16Upload />} />
-      <Route path="/ctc-optimizer" element={<CTCOptimizer />} />
-      <Route path="/capital-gains" element={<CapitalGains />} />
-      <Route path="/itr" element={<ITRAcademy />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/calculate" element={<WizardController />} />
+        <Route path="/results" element={<ResultPage />} />
+        <Route path="/library" element={<TaxLibrary />} />
+        <Route path="/upload" element={<Form16Upload />} />
+        <Route path="/ctc-optimizer" element={<CTCOptimizer />} />
+        <Route path="/capital-gains" element={<CapitalGains />} />
+        <Route path="/itr" element={<ITRAcademy />} />
+      </Routes>
+      <Analytics />
+    </>
   );
 }
 
