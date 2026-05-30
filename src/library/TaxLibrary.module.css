@@ -60,21 +60,17 @@
   transition: all var(--transition-fast);
   display: block;
   line-height: 1.45;
-  border-left: 3px solid transparent;
 }
 
 .navItem:hover {
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: var(--color-surface-3);
   color: var(--color-text-primary);
-  border-left-color: rgba(0, 229, 197, 0.2);
 }
 
 .navItem.active {
-  background-color: rgba(0, 229, 197, 0.06) !important;
-  color: var(--color-teal-400) !important;
-  border-left-color: var(--color-teal-400) !important;
-  font-weight: var(--font-bold);
-  padding-left: 11px;
+  background-color: rgba(0, 191, 165, 0.1);
+  color: var(--color-teal-500);
+  font-weight: var(--font-medium);
 }
 
 .navItemBtn {

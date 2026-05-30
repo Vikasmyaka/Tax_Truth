@@ -105,12 +105,8 @@ export function Logo({ className, to = '/' }) {
     <>
       <svg className={styles.logoIcon} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#logo-grad)" />
-        {/* Math symbol eyes: Plus (+) and Multiply (x) */}
-        <line x1="6.5" y1="10.5" x2="10.5" y2="10.5" stroke="#0B0D11" strokeWidth="2.5" strokeLinecap="round" />
-        <line x1="8.5" y1="8.5" x2="8.5" y2="12.5" stroke="#0B0D11" strokeWidth="2.5" strokeLinecap="round" />
-        
-        <line x1="13.5" y1="8.5" x2="17.5" y2="12.5" stroke="#0B0D11" strokeWidth="2.5" strokeLinecap="round" />
-        <line x1="17.5" y1="8.5" x2="13.5" y2="12.5" stroke="#0B0D11" strokeWidth="2.5" strokeLinecap="round" />
+        <circle cx="8.5" cy="10.5" r="1.5" fill="#0B0D11" />
+        <circle cx="15.5" cy="10.5" r="1.5" fill="#0B0D11" />
         <path d="M7.5 15C8.5 16.5 10 17.5 12 17.5C14 17.5 15.5 16.5 16.5 15" stroke="#0B0D11" strokeWidth="2" strokeLinecap="round" />
         <defs>
           <linearGradient id="logo-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
