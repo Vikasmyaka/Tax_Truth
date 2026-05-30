@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './Dashboard.module.css';
-import { DisclaimerFooter, Logo } from '../components';
+import { DisclaimerFooter, Logo, LogoIcon } from '../components';
 
 export default function Dashboard() {
   return (
@@ -15,7 +15,9 @@ export default function Dashboard() {
       <div className={styles.container}>
         <div className={styles.header}>
           <div>
-            <h1 className={styles.welcomeTitle}>Welcome.</h1>
+            <h1 className={styles.welcomeTitle}>
+              Welcome Buddy <LogoIcon className={styles.inlineLogo} />
+            </h1>
             <p className={styles.welcomeSubtitle}>Simple tax planning, CTC optimization, and step-by-step pre-filing guides.</p>
           </div>
         </div>
